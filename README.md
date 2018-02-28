@@ -1,6 +1,6 @@
 # Anzoategui [![Apache Licensed](https://img.shields.io/badge/license-Apache2.0-blue.svg)](https://raw.githubusercontent.com/raravena80/aragua/master/LICENSE)
 
-This is Rust playground.
+This is a just Rust playground.
 
 The name Anzoategui is just a random name based on the state in Venezuela.
 
