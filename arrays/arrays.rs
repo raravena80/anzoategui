@@ -13,6 +13,8 @@ fn main() {
     // All elements can be initialized to the same value
     let ys: [i32; 500] = [0; 500];
 
+    let zs: [i32; 300] = [0; 300];
+
     // Indexing starts at 0
     println!("first element of the array: {}", xs[0]);
     println!("second element of the array: {}", xs[1]);
@@ -33,5 +35,9 @@ fn main() {
 
     // Out of bound indexing yields a panic
     //println!("{}", xs[5]);
+    //
+    // Analyze zs
+    println!("Borrow the whole slice");
+    analyze_slice(&zs[0 .. 300]);
 }
 
