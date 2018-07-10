@@ -2,6 +2,7 @@ fn main() {
     let mut counter = 0;
 
     let result = loop {
+        println!("{:?}", counter);
         counter += 1;
 
         if counter == 10 {
