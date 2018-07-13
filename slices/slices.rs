@@ -16,4 +16,10 @@ fn main() {
     let wordlength = first_word(&s);
     println!("{}", wordlength);
     s.clear();
+
+    // Another slice
+    let mut s2 = String::from("Not sure what this is");
+    let wl = first_word(&s2);
+    println!("{}", wl);
+    s2.clear();
 }
