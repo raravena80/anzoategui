@@ -1,1 +1,2 @@
 Hi sample file
+Another line
