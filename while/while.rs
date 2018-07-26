@@ -3,7 +3,7 @@ fn main() {
     let mut n = 1;
 
     // Loop while `n` is less than 101
-    while n < 101 {
+    while n < 201 {
         if n % 15 == 0 {
             println!("fizzbuzz");
         } else if n % 3 == 0 {
