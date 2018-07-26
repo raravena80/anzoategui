@@ -4,7 +4,7 @@ fn are_you_on_linux() {
     println!("You are running linux!");
 }
 
-#[cfg(target_os = "darwin")]
+#[cfg(target_os = "macos")]
 fn are_you_on_mac() {
     println!("You are running mac!");
 }
@@ -15,9 +15,9 @@ fn are_you_on_linux() {
     println!("You are *not* running linux!");
 }
 
-#[cfg(not(target_os = "darwin"))]
+#[cfg(not(target_os = "macos"))]
 fn are_you_on_mac() {
-    println!("You are running mac!");
+    println!("You are *not* running mac!");
 }
 
 fn main() {
@@ -27,6 +27,8 @@ fn main() {
     println!("Are you sure?");
     if cfg!(target_os = "linux") {
         println!("Yes. It's definitely linux!");
+    } else if cfg!(target_os = "macos") {
+        println!("Yes. It's definitely mac!");
     } else {
         println!("Yes. It's definitely *not* linux!");
     }
