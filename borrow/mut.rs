@@ -6,4 +6,12 @@ fn main() {
     	*y += 1;
 	}
 	println!("{}", x);
+
+    let mut z = 10;
+    {
+        let zz = &mut z;
+        *zz +=2;
+    }
+	println!("{}", z);
+
 }
