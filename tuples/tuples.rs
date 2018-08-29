@@ -11,5 +11,15 @@ fn main() {
         _      => println!("It doesn't matter what they are"),
         // `_` means don't bind the value to a variable
     }
+
+    let pair2 = (3, 0);
+    println!("Tell me about {:?}", pair2);
+    match pair2 {
+        // Destructure the second
+        (0, y) => println!("First is `0` and `y` is `{:?}`", y),
+        (x, 0) => println!("`x` is `{:?}` and last is `0`", x),
+        _      => println!("It doesn't matter what they are"),
+        // `_` means don't bind the value to a variable
+    } 
 }
 
