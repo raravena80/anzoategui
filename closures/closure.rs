@@ -19,6 +19,8 @@ fn main() {
     // The return type is inferred.
     let one = || 1;
     println!("closure returning one: {}", one());
+    let string = || "Hello";
 
+    println!("closure returning string: {}", string());
 }
 
