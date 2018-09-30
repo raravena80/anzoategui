@@ -9,7 +9,7 @@ fn main() {
 
     // `join` merges a path with a byte container using the OS specific
     // separator, and returns the new path
-    let new_path = path.join("a").join("b");
+    let new_path = path.join("a").join("b").join("c");
 
     // Convert the path into a string slice
     match new_path.to_str() {
