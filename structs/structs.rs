@@ -19,4 +19,11 @@ fn main() {
 
     // this will give an error: pattern does not mention field `x`
     // let Foo { y } = foo;
+
+    struct Bar { m: (u64, u64), n: u32 }
+
+    let bar = Bar { m: (1, 6), n: 34};
+    let Bar { m: (c, d), n } = bar;
+
+    println!("c = {}, d = {}, n = {}", c, d, n);
 }
