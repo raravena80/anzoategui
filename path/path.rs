@@ -16,4 +16,14 @@ fn main() {
         None => panic!("new path is not a valid UTF-8 sequence"),
         Some(s) => println!("new path is {}", s),
     }
+
+    let path2 = Path::new("m");
+    let _display2 = path2.display();
+
+    let new_path2 = path.join("n").join("o").join("q");
+
+    match new_path2.to_str() {
+        None => panic!("new path is not a valid UTF-8 sequence"),
+        Some(s) => println!("new path is {}", s),
+    }
 }
