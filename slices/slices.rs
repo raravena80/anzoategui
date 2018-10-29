@@ -22,4 +22,10 @@ fn main() {
     let wl = first_word(&s2);
     println!("{}", wl);
     s2.clear();
+
+    // Another slice
+    let mut s3 = String::from("let's try again");
+    let wl2 = first_word(&s3);
+    println!("{}", wl2);
+    s3.clear();
 }
