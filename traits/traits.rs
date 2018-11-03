@@ -1,4 +1,4 @@
-struct Sheep { naked: bool, name: &'static str }
+struct Sheep { naked: bool, angry: bool, name: &'static str }
 
 trait Animal {
     // Static method signature; `Self` refers to the implementor type.
@@ -7,6 +7,7 @@ trait Animal {
     // Instance method signatures; these will return a string.
     fn name(&self) -> &'static str;
     fn noise(&self) -> &'static str;
+    fn poke(&self) -> &'static str;
 
     // Traits can provide default method definitions.
     fn talk(&self) {
@@ -19,6 +20,10 @@ impl Sheep {
         self.naked
     }
 
+    fn is_angry(&self) -> bool {
+        self.angry
+    }
+
     fn shear(&mut self) {
         if self.is_naked() {
             // Implementor methods can use the implementor's trait methods.
@@ -29,13 +34,23 @@ impl Sheep {
             self.naked = true;
         }
     }
+
+    fn moo(&mut self) {
+        if self.is_angry() {
+            println!("{} is angry now...", self.name());
+        } else {
+            println!("{} became angry!", self.name);
+            self.angry = true;
+        }
+    }
+
 }
 
 // Implement the `Animal` trait for `Sheep`.
 impl Animal for Sheep {
     // `Self` is the implementor type: `Sheep`.
     fn new(name: &'static str) -> Sheep {
-        Sheep { name: name, naked: false }
+        Sheep { name: name, naked: false, angry: false }
     }
 
     fn name(&self) -> &'static str {
@@ -49,11 +64,19 @@ impl Animal for Sheep {
             "baaaaah!"
         }
     }
-    
+
+    fn poke(&self) -> &'static str {
+        if self.is_angry() {
+            "Grrrrrrrrhhhhhh!!!"
+        } else {
+            "Mmmmmmhmmmm"
+        }
+    }
+
     // Default trait methods can be overridden.
     fn talk(&self) {
         // For example, we can add some quiet contemplation.
-        println!("{} pauses briefly... {}", self.name, self.noise());
+        println!("{} pauses briefly... {} {}", self.name, self.noise(), self.poke());
     }
 }
 
@@ -63,6 +86,7 @@ fn main() {
     // TODO ^ Try removing the type annotations.
 
     dolly.talk();
+    dolly.moo();
     dolly.shear();
     dolly.talk();
 }
