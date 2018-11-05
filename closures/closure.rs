@@ -22,5 +22,9 @@ fn main() {
     let string = || "Hello";
 
     println!("closure returning string: {}", string());
+
+    let fl = || 4.5;
+
+    println!("closure returning a float: {}", fl());
 }
 
