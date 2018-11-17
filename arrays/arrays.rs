@@ -15,6 +15,7 @@ fn main() {
 
     let zs: [i32; 300] = [0; 300];
 
+
     // Indexing starts at 0
     println!("first element of the array: {}", xs[0]);
     println!("second element of the array: {}", xs[1]);
@@ -39,5 +40,9 @@ fn main() {
     // Analyze zs
     println!("Borrow the whole slice");
     analyze_slice(&zs[0 .. 300]);
+
+    println!("Borrow the whole slice");
+    analyze_slice(&zs[0 .. 100]);
+    
 }
 
