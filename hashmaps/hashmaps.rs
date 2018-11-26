@@ -21,6 +21,7 @@ fn main() {
     contacts.insert("Alejandra", "821-5423");
     contacts.insert("Maria Ines", "821-5423");
     contacts.insert("Christina", "212-9321");
+    contacts.insert("Papo", "312-3429");
 
     // Takes a reference and returns Option<&V>
     match contacts.get(&"Daniel") {
