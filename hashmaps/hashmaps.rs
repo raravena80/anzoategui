@@ -39,6 +39,7 @@ fn main() {
     }
 
     contacts.remove(&("Camilla")); 
+    contacts.remove(&("MariaInes")); 
 
     // `HashMap::iter()` returns an iterator that yields 
     // (&'a key, &'a value) pairs in arbitrary order.
