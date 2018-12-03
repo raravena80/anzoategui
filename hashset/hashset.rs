@@ -9,10 +9,12 @@ fn main() {
 
     // `HashSet::insert()` returns false if
     // there was a value already present.
-    assert!(b.insert(4), "Value 4 is already in set B!");
+    //assert!(b.insert(4), "Value 4 is already in set B!");
     // FIXME ^ Comment out this line
 
     b.insert(5);
+    b.insert(6);
+    b.insert(7);
 
     // If a collection's element type implements `Debug`,
     // then the collection implements `Debug`.
