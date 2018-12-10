@@ -14,7 +14,7 @@ fn main() {
         }
     }
 
-    for i in 102..202 {
+    for i in 102..302 {
         if i % 15 == 0 {
             println!("fizzbuzz");
         } else if i % 3 == 0 {
