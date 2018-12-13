@@ -14,4 +14,10 @@ fn main() {
     }
 	println!("{}", z);
 
+    let mut j = "hello";
+    {
+        let jj = &mut j;
+        *jj = "helloworld";
+    }
+	println!("{}", j);
 }
