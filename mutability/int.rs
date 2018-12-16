@@ -9,5 +9,10 @@ fn main() {
 
     println!("{}", x);
     println!("{}", y);
-             
+
+    let a = Arc::new("hi");
+    let b = a.clone();
+
+    println!("{}", a);
+    println!("{}", b);
 }
