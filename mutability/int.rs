@@ -15,4 +15,11 @@ fn main() {
 
     println!("{}", a);
     println!("{}", b);
+
+
+    let h = Arc::new(1.5);
+    let i = h.clone();
+
+    println!("{}", h);
+    println!("{}", i);
 }
