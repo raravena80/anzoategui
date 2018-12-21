@@ -1,6 +1,6 @@
 use std::thread;
 
-static NTHREADS: i32 = 10;
+static NTHREADS: i32 = 20;
 
 // This is the `main` thread
 fn main() {
