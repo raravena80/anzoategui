@@ -19,4 +19,7 @@ fn main() {
     let y = change_truth(a);
     println!("{}", a);
     println!("{}", y);
+
+    let h = vec![4, 6, 6];
+    take(h);
 }
