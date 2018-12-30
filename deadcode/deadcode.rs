@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 fn used_function() {}
 
 // `#[allow(dead_code)]` is an attribute that disables the `dead_code` lint
