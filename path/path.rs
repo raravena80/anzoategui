@@ -20,7 +20,7 @@ fn main() {
     let path2 = Path::new("m");
     let _display2 = path2.display();
 
-    let new_path2 = path.join("n").join("o").join("q");
+    let new_path2 = path.join("nn").join("oo").join("qq");
 
     match new_path2.to_str() {
         None => panic!("new path is not a valid UTF-8 sequence"),
