@@ -12,6 +12,10 @@ impl Rectangle {
     fn perimeter(&self) -> u32 {
         (self.width * 2) + (self.height * 2)
     }
+
+    fn diagonal(&self) -> u32 {
+       (((self.width * self.width) + (self.height * self.height)) as f64).sqrt() as u32
+    }
 }
 
 fn main() {
@@ -25,5 +29,10 @@ fn main() {
     println!(
         "The perimeter of the rectangle is {} pixels.",
         rect1.perimeter()
+    );
+
+    println!(
+        "The diagonal of the rectangle is {}",
+        rect1.diagonal()
     );
 }
