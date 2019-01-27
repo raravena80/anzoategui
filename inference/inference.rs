@@ -1,6 +1,7 @@
 fn main() {
     // Because of the annotation, the compiler knows that `elem` has type u8.
     let elem = 5u8;
+    let elem2 = 10u8;
 
     // Create an empty vector (a growable array).
     let mut vec = Vec::new();
@@ -11,6 +12,7 @@ fn main() {
     vec.push(elem);
     // Aha! Now the compiler knows that `vec` is a vector of `u8`s (`Vec<u8>`)
     // TODO ^ Try commenting out the `vec.push(elem)` line
+    vec.push(elem2);
 
     println!("{:?}", vec);
 }
