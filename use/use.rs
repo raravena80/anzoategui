@@ -11,6 +11,7 @@ enum Work {
     Soldier,
     Redcross,
     General,
+    Pilot,
 }
 
 fn main() {
@@ -38,5 +39,6 @@ fn main() {
         Soldier  => println!("Soldiers fight!"),
         Redcross => println!("Red Cross members help!"),
         General  => println!("Generals fight!"),
+        Pilot    => println!("Pilots flight!"),
     }
 }
