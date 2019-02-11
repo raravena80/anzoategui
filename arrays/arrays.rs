@@ -8,7 +8,7 @@ fn analyze_slice(slice: &[i32]) {
 
 fn main() {
     // Fixed-size array (type signature is superfluous)
-    let xs: [i32; 5] = [1, 2, 3, 4, 5];
+    let xs: [i32; 10] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
     // All elements can be initialized to the same value
     let ys: [i32; 500] = [0; 500];
