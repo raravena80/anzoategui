@@ -47,4 +47,13 @@ fn main() {
             println!("We added 10. `mut_value`: {:?}", m);
         },
     }
+
+    let mut mut_value2 = 10;
+
+    match mut_value2 {
+        ref mut m => {
+            *m += 20;
+            println!("We added 20. `mut_value`: {:?}", m);
+       },
+   }
 }
