@@ -1,0 +1,16 @@
+[package]
+name = "anzoategui"
+version = "0.1.0"
+edition = "2021"
+authors = ["Ricardo Aravena"]
+license = "MIT"
+description = "A Rust learning playground with various examples demonstrating Rust concepts"
+repository = "https://github.com/raravena80/anzoategui"
+readme = "README.md"
+
+[dependencies]
+
+# This project is organized as a collection of binary examples
+# Each .rs file in the original structure will be accessible as a binary
+# Run examples with: cargo run --bin <example-name>
+# Build all examples with: cargo build --all-targets
